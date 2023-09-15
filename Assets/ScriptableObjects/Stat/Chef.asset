@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40922c4814899454ba61aaa388cbe031, type: 3}
+  m_Name: Chef
+  m_EditorClassIdentifier: 
+  enum_Class: 2
+  statDataDic:
+    _serializedList:
+    - Key: 1
+      Value:
+        level: 1
+        exp: 10
+        atk: 2
+        def: 2
+        agi: 2
+        dex: 2
+        cri: 2
+        luk: 2
+        specificities: 
+        skills: 
+    - Key: 2
+      Value:
+        level: 2
+        exp: 20
+        atk: 4
+        def: 4
+        agi: 4
+        dex: 4
+        cri: 4
+        luk: 4
+        specificities: 
+        skills: 
+    - Key: 3
+      Value:
+        level: 3
+        exp: 40
+        atk: 6
+        def: 6
+        agi: 6
+        dex: 6
+        cri: 6
+        luk: 6
+        specificities: 
+        skills: 
+    - Key: 4
+      Value:
+        level: 4
+        exp: 80
+        atk: 8
+        def: 8
+        agi: 8
+        dex: 8
+        cri: 8
+        luk: 8
+        specificities: 
+        skills: 
+    - Key: 5
+      Value:
+        level: 5
+        exp: 160
+        atk: 10
+        def: 10
+        agi: 10
+        dex: 10
+        cri: 10
+        luk: 10
+        specificities: 
+        skills: 
+    - Key: 6
+      Value:
+        level: 6
+        exp: 320
+        atk: 12
+        def: 12
+        agi: 12
+        dex: 12
+        cri: 12
+        luk: 12
+        specificities: 
+        skills: 
+    - Key: 7
+      Value:
+        level: 7
+        exp: 640
+        atk: 14
+        def: 14
+        agi: 14
+        dex: 14
+        cri: 14
+        luk: 14
+        specificities: 
+        skills: 
+    - Key: 8
+      Value:
+        level: 8
+        exp: 1280
+        atk: 16
+        def: 16
+        agi: 16
+        dex: 16
+        cri: 16
+        luk: 16
+        specificities: 
+        skills: 
+    - Key: 9
+      Value:
+        level: 9
+        exp: 2560
+        atk: 18
+        def: 18
+        agi: 18
+        dex: 18
+        cri: 18
+        luk: 18
+        specificities: 
+        skills: 
+    - Key: 10
+      Value:
+        level: 10
+        exp: 5120
+        atk: 20
+        def: 20
+        agi: 20
+        dex: 20
+        cri: 20
+        luk: 20
+        specificities: 
+        skills: 

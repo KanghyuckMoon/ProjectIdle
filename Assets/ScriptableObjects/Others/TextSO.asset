@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e05ef6db3c938d488e503630093a359, type: 3}
+  m_Name: TextSO
+  m_EditorClassIdentifier: 
+  textDataDic:
+    _serializedList:
+    - Key: Captain
+      Value: "\uC120\uC7A5\r"
+    - Key: SwordMan
+      Value: "\uAC80\uC0AC\r"
+    - Key: Chef
+      Value: "\uC694\uB9AC\uC0AC\r"
+    - Key: Sniper
+      Value: "\uC800\uACA9\uC218\r"
+    - Key: None
+      Value: "\uB17C\r"
+    - Key: Rookie
+      Value: "\uB8E8\uD0A4\r"
+    - Key: Supernova
+      Value: "\uCD08\uC2E0\uC131\r"
+    - Key: Swots
+      Value: "\uCE60\uBB34\uD574\r"
+    - Key: FourEmperors
+      Value: "\uC0AC\uD669\r"
+    - Key: PirateKing
+      Value: "\uD574\uC801\uC655\r"
+    - Key: Skill
+      Value: "\uC2A4\uD0AC\r"
+    - Key: Onigiri
+      Value: "\uC624\uB2C8\uAE30\uB9AC\r"
+    - Key: Specipy
+      Value: "\uD2B9\uC131\r"
+    - Key: AtkUp
+      Value: "\uACF5\uACA9\uB825 \uC99D\uAC00\r"
+    - Key: AtkUp_Ex
+      Value: "\uACF5\uACA9\uB825\uC774 \uC99D\uAC00\uD569\uB2C8\uB2E4\r"
+    - Key: DefUp
+      Value: "\uBC29\uC5B4\uB825 \uC99D\uAC00\r"
+    - Key: DefUp_Ex
+      Value: "\uBC29\uC5B4\uB825\uC774 \uC99D\uAC00\uD569\uB2C8\uB2E4"
