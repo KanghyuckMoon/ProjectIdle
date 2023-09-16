@@ -5,7 +5,7 @@ using UnityEngine;
 public enum Enum_Stat
 {
 	Atk,
-	Def,
+	Hp,
 	Agi,
 	Dex,
 	Cri,

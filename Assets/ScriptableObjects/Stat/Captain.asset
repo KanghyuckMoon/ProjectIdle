@@ -20,11 +20,12 @@ MonoBehaviour:
         level: 1
         exp: 10
         atk: 2
-        def: 2
+        hp: 20
         agi: 2
         dex: 2
         cri: 2
         luk: 2
+        atkRange: 2
         specificities: 
         skills: 
     - Key: 2
@@ -32,11 +33,12 @@ MonoBehaviour:
         level: 2
         exp: 20
         atk: 4
-        def: 4
+        hp: 25
         agi: 4
         dex: 4
         cri: 4
         luk: 4
+        atkRange: 2
         specificities: 
         skills: 
     - Key: 3
@@ -44,11 +46,12 @@ MonoBehaviour:
         level: 3
         exp: 40
         atk: 6
-        def: 6
+        hp: 30
         agi: 6
         dex: 6
         cri: 6
         luk: 6
+        atkRange: 2
         specificities: 
         skills: 
     - Key: 4
@@ -56,11 +59,12 @@ MonoBehaviour:
         level: 4
         exp: 80
         atk: 8
-        def: 8
+        hp: 35
         agi: 8
         dex: 8
         cri: 8
         luk: 8
+        atkRange: 2
         specificities: 
         skills: 
     - Key: 5
@@ -68,11 +72,12 @@ MonoBehaviour:
         level: 5
         exp: 160
         atk: 10
-        def: 10
+        hp: 40
         agi: 10
         dex: 10
         cri: 10
         luk: 10
+        atkRange: 2
         specificities: 
         skills: 
     - Key: 6
@@ -80,11 +85,12 @@ MonoBehaviour:
         level: 6
         exp: 320
         atk: 12
-        def: 12
+        hp: 45
         agi: 12
         dex: 12
         cri: 12
         luk: 12
+        atkRange: 2
         specificities: 
         skills: 
     - Key: 7
@@ -92,11 +98,12 @@ MonoBehaviour:
         level: 7
         exp: 640
         atk: 14
-        def: 14
+        hp: 50
         agi: 14
         dex: 14
         cri: 14
         luk: 14
+        atkRange: 2
         specificities: 
         skills: 
     - Key: 8
@@ -104,11 +111,12 @@ MonoBehaviour:
         level: 8
         exp: 1280
         atk: 16
-        def: 16
+        hp: 55
         agi: 16
         dex: 16
         cri: 16
         luk: 16
+        atkRange: 2
         specificities: 
         skills: 
     - Key: 9
@@ -116,11 +124,12 @@ MonoBehaviour:
         level: 9
         exp: 2560
         atk: 18
-        def: 18
+        hp: 60
         agi: 18
         dex: 18
         cri: 18
         luk: 18
+        atkRange: 2
         specificities: 
         skills: 
     - Key: 10
@@ -128,10 +137,11 @@ MonoBehaviour:
         level: 10
         exp: 5120
         atk: 20
-        def: 20
+        hp: 65
         agi: 20
         dex: 20
         cri: 20
         luk: 20
+        atkRange: 2
         specificities: 
         skills: 

@@ -15,11 +15,20 @@ MonoBehaviour:
   nickName: Moon4
   enum_Class: 3
   exp: 0
-  level_Atk: 0
-  level_Def: 0
-  level_Agi: 0
-  level_Dex: 0
-  level_Cri: 0
-  level_Luk: 0
+  level_class: 1
+  level_Atk: 2
+  level_Hp: 20
+  level_Agi: 2
+  level_Dex: 2
+  level_Cri: 2
+  level_Luk: 2
+  atkRange: 2
+  addLevel_Atk: 0
+  addLevel_Hp: 0
+  addLevel_Agi: 0
+  addLevel_Dex: 0
+  addLevel_Cri: 0
+  addLevel_Luk: 0
   specificityDataList: []
   skillDataList: []
+  allStatDataSO: {fileID: 11400000, guid: f3b7a06c1f0b2ce4986d2432c8b4fff0, type: 2}

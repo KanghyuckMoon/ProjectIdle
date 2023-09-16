@@ -100,12 +100,12 @@ public class StatReseter : MonoBehaviour
 
 	private void SetStatDataSO(StatDataSO statDataSO, string tsv)
 	{
+		Debug.Log(tsv);
 		statDataSO.statDataDic.Clear();
-
 		string[] col = tsv.Split('\t');
 		string[] row = tsv.Split('\n');
 		int colSize = col.Length;
-		int rowSize = row.Length;
+		int rowSize = row[0].Split('\t').Length - 1;
 
 		for (int i = 1; i <= rowSize; i++)
 		{
@@ -114,16 +114,17 @@ public class StatReseter : MonoBehaviour
 			statData.level = int.Parse(col[i].Split('\n')[0]); //Level
 			statData.exp = int.Parse(col[i+ rowSize * 1].Split('\n')[0]); //Exp
 			statData.atk = int.Parse(col[i+ rowSize * 2].Split('\n')[0]); //Atk
-			statData.def = int.Parse(col[i+ rowSize * 3].Split('\n')[0]); //Def
+			statData.hp = int.Parse(col[i+ rowSize * 3].Split('\n')[0]); //Def
 			statData.agi = int.Parse(col[i+ rowSize * 4].Split('\n')[0]); //Agi
 			statData.dex = int.Parse(col[i+ rowSize * 5].Split('\n')[0]); //Dex
 			statData.cri = int.Parse(col[i+ rowSize * 6].Split('\n')[0]); //Cri
 			statData.luk = int.Parse(col[i + rowSize * 7].Split('\n')[0]); //Luk
+			statData.atkRange = int.Parse(col[i + rowSize * 8].Split('\n')[0]); //AtkRange
 
 			List<Enum_Specificity> enum_Specificities = new List<Enum_Specificity>();
 
 			//Specificity
-			var spec = col[i + rowSize * 8].Split('\n')[0].Split(',');
+			var spec = col[i + rowSize * 9].Split('\n')[0].Split(',');
 			for(int j = 0; j < spec.Length; ++j)
 			{
 				enum_Specificities.Add((Enum_Specificity)Enum.Parse(typeof(Enum_Specificity), spec[j]));
@@ -132,7 +133,7 @@ public class StatReseter : MonoBehaviour
 			List<Enum_Skill> enum_Skills = new List<Enum_Skill>();
 
 			//SKills
-			var skill = col[i + rowSize * 9].Split('\n')[0].Split(',');
+			var skill = col[i + rowSize * 10].Split('\n')[0].Split(',');
 			for (int j = 0; j < skill.Length; ++j)
 			{
 				enum_Skills.Add((Enum_Skill)Enum.Parse(typeof(Enum_Skill), skill[j]));

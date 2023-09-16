@@ -4,5 +4,6 @@ using UnityEngine;
 using Utill.Pattern;
 public class CharacterManager : MonoSingleton<CharacterManager>
 {
-	public List<BaseCharacter> baseCharacters = new List<BaseCharacter>();
+	public List<BaseCharacter> playerCharacters = new List<BaseCharacter>();
+	public List<BaseCharacter> enemyCharacters = new List<BaseCharacter>();
 }

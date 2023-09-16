@@ -48,9 +48,9 @@ public class StatItem : MonoBehaviour
 
 	public void UpdateUpgradeButton()
 	{
-		levelText.text = $"LV.{ReturnStatLevel()}";
+		levelText.text = $"LV.{ReturnStatAddLevel()}(+{ReturnStatLevel()})";
 		itemNameText.text = ReturnStatName();
-		statText.text = $"{ReturnStatLevel()}"; // 임시
+		statText.text = $"{ReturnStatAddLevel() + ReturnStatLevel()}"; // 임시
 
 		signMoeny.Sign(Money.ReturnMoney(3, 500)); // 임시
 
@@ -79,22 +79,22 @@ public class StatItem : MonoBehaviour
 		{
 			default:
 			case Enum_Stat.Atk:
-				characterData.level_Atk += add;
+				characterData.addLevel_Atk += add;
 				break;
-			case Enum_Stat.Def:
-				characterData.level_Def += add;
+			case Enum_Stat.Hp:
+				characterData.addLevel_Hp += add;
 				break;
 			case Enum_Stat.Agi:
-				characterData.level_Agi += add;
+				characterData.addLevel_Agi += add;
 				break;
 			case Enum_Stat.Dex:
-				characterData.level_Dex += add;
+				characterData.addLevel_Dex += add;
 				break;
 			case Enum_Stat.Cri:
-				characterData.level_Cri += add;
+				characterData.addLevel_Cri += add;
 				break;
 			case Enum_Stat.Luk:
-				characterData.level_Luk += add;
+				characterData.addLevel_Luk += add;
 				break;
 		}
 	}
@@ -106,8 +106,8 @@ public class StatItem : MonoBehaviour
 			default:
 			case Enum_Stat.Atk:
 				return characterData.level_Atk;
-			case Enum_Stat.Def:
-				return characterData.level_Def;
+			case Enum_Stat.Hp:
+				return characterData.level_Hp;
 			case Enum_Stat.Agi:
 				return characterData.level_Agi;
 			case Enum_Stat.Dex:
@@ -118,6 +118,25 @@ public class StatItem : MonoBehaviour
 				return characterData.level_Luk;
 		}
 	}
+	private int ReturnStatAddLevel()
+	{
+		switch (enum_Stat)
+		{
+			default:
+			case Enum_Stat.Atk:
+				return characterData.addLevel_Atk;
+			case Enum_Stat.Hp:
+				return characterData.addLevel_Hp;
+			case Enum_Stat.Agi:
+				return characterData.addLevel_Agi;
+			case Enum_Stat.Dex:
+				return characterData.addLevel_Dex;
+			case Enum_Stat.Cri:
+				return characterData.addLevel_Cri;
+			case Enum_Stat.Luk:
+				return characterData.addLevel_Luk;
+		}
+	}
 
 	private string ReturnStatName()
 	{
@@ -126,12 +145,12 @@ public class StatItem : MonoBehaviour
 			default:
 			case Enum_Stat.Atk:
 				return "공격력";
-			case Enum_Stat.Def:
-				return "방어력";
+			case Enum_Stat.Hp:
+				return "체력";
 			case Enum_Stat.Agi:
 				return "공격속도";
 			case Enum_Stat.Dex:
-				return "명중률";
+				return "이동속도";
 			case Enum_Stat.Cri:
 				return "치명타 데미지";
 			case Enum_Stat.Luk:
