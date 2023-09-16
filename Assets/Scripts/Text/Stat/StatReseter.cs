@@ -92,8 +92,11 @@ public class StatReseter : MonoBehaviour
 			case Enum_Class.Sniper:
 				url = URL.SNIPER;
 				break;
+			case Enum_Class.TrashMob:
+				url = URL.TRASHMOB;
+				break;
 		}
-		UnityWebRequest www = UnityWebRequest.Get(URL.CAPTAIN);
+		UnityWebRequest www = UnityWebRequest.Get(url);
 		yield return www.SendWebRequest();
 		SetStatDataSO(statDataSO, www.downloadHandler.text);
 	}

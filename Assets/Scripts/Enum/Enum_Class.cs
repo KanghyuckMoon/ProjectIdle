@@ -7,5 +7,6 @@ public enum Enum_Class
 	Captain,
 	SwordMan,
 	Chef,
-	Sniper
+	Sniper,
+	TrashMob,
 }

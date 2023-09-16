@@ -17,8 +17,8 @@ MonoBehaviour:
     enemyDataList:
     - enemyAddress: Enemy1
       count: 1
-    - enemyAddress: Enemy2
-      count: 2
+    - enemyAddress: Enemy1
+      count: 1
   - stageName: Stage 1-2
     enemyDataList:
     - enemyAddress: Enemy1

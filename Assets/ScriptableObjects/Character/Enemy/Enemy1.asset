@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b583e62b6e608f4baf31241f1fc93ac, type: 3}
+  m_Name: Enemy1
+  m_EditorClassIdentifier: 
+  nickName: Enemy1
+  enum_Class: 4
+  exp: 0
+  level_class: 1
+  level_Atk: 1
+  level_Hp: 5
+  level_Agi: 1
+  level_Dex: 2
+  level_Cri: 2
+  level_Luk: 2
+  atkRange: 2
+  addLevel_Atk: 0
+  addLevel_Hp: 0
+  addLevel_Agi: 0
+  addLevel_Dex: 0
+  addLevel_Cri: 0
+  addLevel_Luk: 0
+  specificityDataList: []
+  skillDataList: []
+  allStatDataSO: {fileID: 11400000, guid: f3b7a06c1f0b2ce4986d2432c8b4fff0, type: 2}

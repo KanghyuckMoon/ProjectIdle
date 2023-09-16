@@ -25,7 +25,7 @@ MonoBehaviour:
         dex: 2
         cri: 2
         luk: 2
-        atkRange: 2
+        atkRange: 4
         specificities: 
         skills: 
     - Key: 2
@@ -38,7 +38,7 @@ MonoBehaviour:
         dex: 4
         cri: 4
         luk: 4
-        atkRange: 2
+        atkRange: 4
         specificities: 
         skills: 
     - Key: 3
@@ -51,7 +51,7 @@ MonoBehaviour:
         dex: 6
         cri: 6
         luk: 6
-        atkRange: 2
+        atkRange: 4
         specificities: 
         skills: 
     - Key: 4
@@ -64,7 +64,7 @@ MonoBehaviour:
         dex: 8
         cri: 8
         luk: 8
-        atkRange: 2
+        atkRange: 4
         specificities: 
         skills: 
     - Key: 5
@@ -77,7 +77,7 @@ MonoBehaviour:
         dex: 10
         cri: 10
         luk: 10
-        atkRange: 2
+        atkRange: 4
         specificities: 
         skills: 
     - Key: 6
@@ -90,7 +90,7 @@ MonoBehaviour:
         dex: 12
         cri: 12
         luk: 12
-        atkRange: 2
+        atkRange: 4
         specificities: 
         skills: 
     - Key: 7
@@ -103,7 +103,7 @@ MonoBehaviour:
         dex: 14
         cri: 14
         luk: 14
-        atkRange: 2
+        atkRange: 4
         specificities: 
         skills: 
     - Key: 8
@@ -116,7 +116,7 @@ MonoBehaviour:
         dex: 16
         cri: 16
         luk: 16
-        atkRange: 2
+        atkRange: 4
         specificities: 
         skills: 
     - Key: 9
@@ -129,7 +129,7 @@ MonoBehaviour:
         dex: 18
         cri: 18
         luk: 18
-        atkRange: 2
+        atkRange: 4
         specificities: 
         skills: 
     - Key: 10
@@ -142,6 +142,6 @@ MonoBehaviour:
         dex: 20
         cri: 20
         luk: 20
-        atkRange: 2
+        atkRange: 4
         specificities: 
         skills: 

@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEditor.U2D.Animation;
 using UnityEngine;
@@ -49,6 +50,8 @@ public class BaseCharacter : MonoBehaviour
 	private BaseCharacter target;
 
 	private float attackTimer = 0f;
+
+	private bool isJoyStickMove;
 
 	public Action UiUpdateAction
 	{
@@ -102,22 +105,19 @@ public class BaseCharacter : MonoBehaviour
 
 	public void Move()
 	{
+		if(isJoyStickMove)
+		{
+			return;
+		}
+
 		if(target == null || target.IsDead)
 		{
 			ReTarget();
+			return;
 		}
 
 		Vector2 currentPosition = transform.position;
 		Vector2 targetPosition = target.transform.position;
-
-		if(targetPosition.x < currentPosition.x)
-		{
-			spriteRenderer.flipX = true;
-		}
-		else
-		{
-			spriteRenderer.flipX = false;
-		}
 
 		float distance = Vector2.Distance(currentPosition, targetPosition);
 		bool isAttack = distance <= characterStat.AtkRange;
@@ -128,11 +128,30 @@ public class BaseCharacter : MonoBehaviour
 		}
 		else
 		{
-			float step = characterStat.Dex * Time.deltaTime;
-			transform.position = Vector2.MoveTowards(currentPosition, targetPosition, step);
+			//float step = characterStat.Dex * Time.deltaTime;
+			//transform.position = Vector2.MoveTowards(currentPosition, targetPosition, step);
+			Vector2 dir = (targetPosition - currentPosition).normalized;
+			MoveDirection(dir);
 		}
 
 		animator.SetBool("isMove", !isAttack);
+	}
+
+	private void MoveDirection(Vector2 direction)
+	{
+		if(direction.x > 0)
+		{
+			spriteRenderer.flipX = false;
+		}
+		else
+		{
+			spriteRenderer.flipX = true;
+		}
+
+		float step = characterStat.Dex * Time.deltaTime;
+		Vector2 movement = direction * step;
+		transform.position += (Vector3)movement;
+		//transform.Translate(direction * step);// = new Vector2(direction.x + transform.position.x, direction.y + transform.position.y) * step;// Vector2.MoveTowards(currentPosition, targetPosition, step);
 	}
 
 	public void Attack()
@@ -177,6 +196,10 @@ public class BaseCharacter : MonoBehaviour
 
 		foreach (BaseCharacter enemy in list)
 		{
+			if(enemy.IsDead)
+			{
+				continue;
+			}
 			float distance = Vector2.Distance(currentPosition, enemy.transform.position);
 			if (distance < closestDistance)
 			{
@@ -190,5 +213,16 @@ public class BaseCharacter : MonoBehaviour
 			Debug.Log("가장 가까운 적: " + closestEnemy.name);
 		}
 		return closestEnemy;
+	}
+
+	public void JoyStickMove(Vector2 dir)
+	{
+		isJoyStickMove = true;
+		MoveDirection(dir);
+	}
+
+	public void JoyStickMoveEnd()
+	{
+		isJoyStickMove = false;
 	}
 }
