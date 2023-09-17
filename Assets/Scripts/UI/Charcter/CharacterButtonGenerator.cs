@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,10 +15,12 @@ public class CharacterButtonGenerator : MonoBehaviour
 		int count = GameManager.Instance.PlayerCharacter.CharacterCount;
 		for (int i = 0; i < count; ++i)
 		{
+			int index = i;
 			var obj = Instantiate(characterButtonPrefab, parent);
 			var chBtn = obj.GetComponent<CharacterButton>();
 			var btn = chBtn.GetButton();
-			btn.AddEvent(characterPanel.OpenAndClose, i);
+			chBtn.SetImage(index);
+			btn.AddEvent(characterPanel.OpenAndClose, index);
 		}
 	}
 }

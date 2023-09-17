@@ -14,11 +14,11 @@ public class EnemySpawner : MonoBehaviour
 		for(int i = 0; i < stageData.enemyDataList.Count; i++) 
 		{
 			EnemyData enemyData = stageData.enemyDataList[i];
-			int random = Random.Range(0, spawnPoint.Count);
 			GameObject enemy = Resources.Load<GameObject>($"Enemy/{enemyData.enemyAddress}");
 			for(int j =0 ; j < enemyData.count; j++)
 			{
-				Instantiate(enemy, spawnPoint[random].position, Quaternion.identity);
+				int random = Random.Range(0, spawnPoint.Count);
+				Instantiate(enemy, spawnPoint[random].position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0), Quaternion.identity);
 			}
 		}
 	}
