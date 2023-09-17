@@ -30661,7 +30661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78e362ef4eabafc4c896d89ce3430509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 419cc42be32a02840bc700b159b3b863, type: 2}
+  Event: {fileID: 11400000, guid: d0ac331d50f13f546ba42811b4636e7a, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -30717,7 +30717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78e362ef4eabafc4c896d89ce3430509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 36ab550246929b5438aa04758f37c06c, type: 2}
+  Event: {fileID: 11400000, guid: 419cc42be32a02840bc700b159b3b863, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -33891,19 +33891,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4338118611091586642, guid: 52a2e7f5d25fd5b46a6773c1610b9953, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4338118611091586642, guid: 52a2e7f5d25fd5b46a6773c1610b9953, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4338118611091586642, guid: 52a2e7f5d25fd5b46a6773c1610b9953, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 354.3424
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4338118611091586642, guid: 52a2e7f5d25fd5b46a6773c1610b9953, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4406922871192022881, guid: 52a2e7f5d25fd5b46a6773c1610b9953, type: 3}
       propertyPath: chIndex
