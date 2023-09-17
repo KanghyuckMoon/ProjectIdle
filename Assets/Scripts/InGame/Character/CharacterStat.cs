@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CharacterStat
 {
-	public int Hp;
-	public int MaxHp;
-	public int Atk;
-	public int Agi;
-	public int Dex;
-	public int Cri;
-	public int Luk;
-	public int AtkRange;
+	public float Hp;
+	public float MaxHp;
+	public float Atk;
+	public float Agi;
+	public float Dex;
+	public float Cri;
+	public float Luk;
+	public float AtkRange;
 
 	public static CharacterStat CharacterDataToChStat(CharacterData characterData)
 	{

@@ -168,11 +168,19 @@ public class BaseCharacter : MonoBehaviour
 		{
 			attackTimer = 1f;
 			animator.SetTrigger("isAttack");
-			target.Hit(characterStat.Atk);
+			bool Cri = UnityEngine.Random.Range(0, 100) < characterStat.Luk;
+			if(Cri)
+			{
+				target.Hit(characterStat.Atk * characterStat.Cri);
+			}
+			else
+			{
+				target.Hit(characterStat.Atk);
+			}
 		}
 	}
 
-	public void Hit(int damage)
+	public void Hit(float damage)
 	{
 		characterStat.Hp -= damage;
 		UiUpdateAction?.Invoke();

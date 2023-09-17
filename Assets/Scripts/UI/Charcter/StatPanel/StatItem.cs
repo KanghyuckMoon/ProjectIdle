@@ -59,9 +59,9 @@ public class StatItem : MonoBehaviour
 
 	public void UpdateUpgradeButton()
 	{
-		levelText.text = $"LV.{ReturnStatAddLevel()}(+{ReturnStatLevel()})";
+		levelText.text = $"LV.{ReturnStatAddLevel()}(+C.{ReturnStatLevel()})";
 		itemNameText.text = ReturnStatName();
-		statText.text = $"{ReturnStatAddLevel() + ReturnStatLevel()}"; // 임시
+		statText.text = $"{((float)ReturnStatAddLevel() / 10) + ReturnStatLevel()}"; // 임시
 
 		signMoeny.Sign(SpendMoney); // 임시
 

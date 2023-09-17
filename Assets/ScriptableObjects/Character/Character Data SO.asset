@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b583e62b6e608f4baf31241f1fc93ac, type: 3}
   m_Name: Character Data SO
   m_EditorClassIdentifier: 
-  nickName: Moon
+  nickName: L
   enum_Class: 0
   exp: 0
   level_class: 1

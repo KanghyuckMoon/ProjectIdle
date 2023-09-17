@@ -4,50 +4,50 @@ using UnityEngine;
 
 public class CharacterData
 {
-	public int ATK
+	public float ATK
 	{
 		get
 		{
-			return level_Atk + addLevel_Atk;
+			return level_Atk + ((float)addLevel_Atk / 10);
 		}
 	}
-	public int HP
+	public float HP
 	{
 		get
 		{
-			return level_Hp + addLevel_Hp;
+			return level_Hp + ((float)addLevel_Hp / 10);
 		}
 	}
-	public int AGI
+	public float AGI
 	{
 		get
 		{
-			return level_Agi + addLevel_Agi;
+			return level_Agi + ((float)addLevel_Agi / 10);
 		}
 	}
-	public int DEX
+	public float DEX
 	{
 		get
 		{
-			return level_Dex + addLevel_Dex;
+			return level_Dex + ((float)addLevel_Dex / 10);
 		}
 	}
-	public int CRI
+	public float CRI
 	{
 		get
 		{
-			return level_Cri + addLevel_Cri;
+			return level_Cri + ((float)addLevel_Cri / 10);
 		}
 	}
-	public int LUK
+	public float LUK
 	{
 		get
 		{
-			return level_Luk + addLevel_Luk;
+			return level_Luk + ((float)addLevel_Luk / 10);
 		}
 	}
 
-	public int AtkRange
+	public float AtkRange
 	{
 		get
 		{
