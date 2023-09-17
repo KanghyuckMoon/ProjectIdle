@@ -23,5 +23,5 @@ MonoBehaviour:
     enemyDataList:
     - enemyAddress: Enemy1
       count: 1
-    - enemyAddress: Enemy3
+    - enemyAddress: Enemy2
       count: 3

@@ -6,6 +6,22 @@ using TMPro;
 
 public class StatItem : MonoBehaviour
 {
+	public Money SpendMoney
+	{
+		get
+		{
+			if (spendMoney == null)
+			{
+				spendMoney = Money.ReturnMoney(0, 50 * (ReturnStatAddLevel() + 1));
+			}
+			return spendMoney;
+		}
+		set
+		{
+			spendMoney = value;
+		}
+	}
+
 	[SerializeField] private Image image;
 	[SerializeField] private Enum_Stat enum_Stat;
 	[SerializeField] private TextMeshProUGUI levelText;
@@ -33,14 +49,9 @@ public class StatItem : MonoBehaviour
 
 	public void ClickUpgrade()
 	{
-		if(spendMoney == null)
+		if (GameManager.Instance.PlayerMoney.CheckMoneyGreater(Enum_MoneyType.Gold, SpendMoney))
 		{
-			spendMoney = Money.ReturnMoney(3, 500);
-		}
-		if (GameManager.Instance.PlayerMoney.CheckMoneyGreater(Enum_MoneyType.Gold, spendMoney))
-		{
-			//
-			GameManager.Instance.PlayerMoney.SpendMoney(Enum_MoneyType.Gold, spendMoney);
+			GameManager.Instance.PlayerMoney.SpendMoney(Enum_MoneyType.Gold, SpendMoney);
 			AddStatLevel(1);
 		}
 		UpdateUpgradeButton();
@@ -52,18 +63,14 @@ public class StatItem : MonoBehaviour
 		itemNameText.text = ReturnStatName();
 		statText.text = $"{ReturnStatAddLevel() + ReturnStatLevel()}"; // 임시
 
-		signMoeny.Sign(Money.ReturnMoney(3, 500)); // 임시
+		signMoeny.Sign(SpendMoney); // 임시
 
 		//임시
 		CheckCanUpgrade();
 	}
 	public void CheckCanUpgrade()
 	{
-		if (spendMoney == null)
-		{
-			spendMoney = Money.ReturnMoney(3, 500);
-		}
-		if (GameManager.Instance.PlayerMoney.CheckMoneyGreater(Enum_MoneyType.Gold, spendMoney))
+		if (GameManager.Instance.PlayerMoney.CheckMoneyGreater(Enum_MoneyType.Gold, SpendMoney))
 		{
 			upgradeText.color = Color.black;
 		}
@@ -97,6 +104,7 @@ public class StatItem : MonoBehaviour
 				characterData.addLevel_Luk += add;
 				break;
 		}
+		spendMoney = Money.ReturnMoney(0, 50 * (ReturnStatAddLevel() + 1));
 	}
 
 	private int ReturnStatLevel()

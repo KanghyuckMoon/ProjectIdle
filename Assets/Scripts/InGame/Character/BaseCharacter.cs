@@ -20,8 +20,10 @@ public class BaseCharacter : MonoBehaviour
 
 			if(characterStat.Hp <= 0)
 			{
+				spriteRenderer.color = Color.gray;
 				return true;
 			}
+			spriteRenderer.color = Color.white;
 			return false;
 		}
 	}
@@ -40,6 +42,7 @@ public class BaseCharacter : MonoBehaviour
 	[SerializeField] private int index;
 	[Header("Enemy")]
 	[SerializeField] private CharacterDataSO characterDataSO;
+	[SerializeField] private RewardSO rewardSO;
 	[SerializeField] private Animator animator;
 	[SerializeField] private SpriteRenderer spriteRenderer;
 
@@ -101,6 +104,10 @@ public class BaseCharacter : MonoBehaviour
 	public void ResetStat()
 	{
 		characterStat = CharacterStat.CharacterDataToChStat(characterData);
+		characterStat.Hp = characterStat.MaxHp;
+		spriteRenderer.color = Color.white;
+		gameObject.SetActive(true);
+		UiUpdateAction?.Invoke();
 	}
 
 	public void Move()
@@ -172,7 +179,16 @@ public class BaseCharacter : MonoBehaviour
 
 		if (IsDead)
 		{
-			gameObject.SetActive(false);
+			if(!isPlayer)
+			{
+				GameManager.Instance.PlayerMoney.EarnMoney(rewardSO.moneyType, Money.ReturnMoney(rewardSO.moneyIndex, rewardSO.money));
+				GameManager.Instance.PlayerProfile.AddExp(rewardSO.exp);
+				CharacterManager.Instance.CheckStageClear();
+			}
+			else
+			{
+				CharacterManager.Instance.CheckStageFailed();
+			}
 		}
 	}
 

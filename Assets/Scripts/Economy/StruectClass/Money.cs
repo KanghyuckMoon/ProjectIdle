@@ -27,7 +27,8 @@ public class Money
         Money money = new Money();
         money.index = index;
         money.money[index] = amount;
-        return money;
+        money.update();
+		return money;
     }
 
     public void SetMoney(int[] money)

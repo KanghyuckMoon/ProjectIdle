@@ -7,11 +7,6 @@ public class EnemySpawner : MonoBehaviour
 {
 	[SerializeField] private List<Transform> spawnPoint;
 
-	//public void Start()
-	//{
-	//	Spawn();
-	//}
-
 	public void Spawn()
 	{
 		StageData stageData = StageManager.Instance.CurStageData;

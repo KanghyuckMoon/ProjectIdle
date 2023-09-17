@@ -13,11 +13,31 @@ public class StageManager : MonoSingleton<StageManager>
 
 	private StageData curStageData;
 
+	private void Start()
+	{
+		EnterStage(allStageDataSO.stageDataList[0]);
+	}
+
 	public void EnterStage(StageData stageData)
 	{
 		curStageData = stageData;
 		GameEventManager.Instance.EventRaise("ChangeStage");
 	}
+
+	public void EnterNextStage()
+	{
+		int curIndex = allStageDataSO.stageDataList.IndexOf(curStageData);
+		if ((curIndex + 1) < allStageDataSO.stageDataList.Count) 
+		{
+			EnterStage(allStageDataSO.stageDataList[curIndex + 1]);
+		}
+	}
+
+	public void ResetStage()
+	{
+		EnterStage(curStageData);
+	}
+
 
 	[ContextMenu("InitStageData")]
 	public void InitStageData()
