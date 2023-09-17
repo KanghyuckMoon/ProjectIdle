@@ -29,18 +29,8 @@ MonoBehaviour:
   addLevel_Dex: 0
   addLevel_Cri: 0
   addLevel_Luk: 0
-  specificityDataList:
-  - enum_Specificity: 1
-    level: 1
-    enum_Grade: 0
-  - enum_Specificity: 2
-    level: 2
-    enum_Grade: 0
+  specificityDataList: []
   skillDataList:
-  - enum_Skill: 1
+  - enum_Skill: 2
     level: 1
-  - enum_Skill: 1
-    level: 2
-  - enum_Skill: 1
-    level: 3
   allStatDataSO: {fileID: 11400000, guid: f3b7a06c1f0b2ce4986d2432c8b4fff0, type: 2}

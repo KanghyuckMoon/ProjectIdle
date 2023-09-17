@@ -22,6 +22,19 @@ public class StageManager : MonoSingleton<StageManager>
 	{
 		curStageData = stageData;
 		GameEventManager.Instance.EventRaise("ChangeStage");
+		int curIndex = allStageDataSO.stageDataList.IndexOf(curStageData);
+		if (curIndex == 4)
+		{
+			GameEventManager.Instance.EventRaise("GetCH1");
+		}
+		else if(curIndex == 16)
+		{
+			GameEventManager.Instance.EventRaise("GetCH2");
+		}
+		else if(curIndex == 22)
+		{
+			GameEventManager.Instance.EventRaise("GetCH3");
+		}
 	}
 
 	public void EnterNextStage()

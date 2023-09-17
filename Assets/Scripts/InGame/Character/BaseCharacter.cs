@@ -9,6 +9,28 @@ using UnityEngine;
 
 public class BaseCharacter : MonoBehaviour
 {
+	public bool IsPlayer => isPlayer;
+	public BaseCharacter Target => target;
+
+	public bool IsAttack
+	{
+		get
+		{
+			return isAttack;
+		}
+	}
+	public float TargetDistance
+	{
+		get
+		{
+			Vector2 currentPosition = transform.position;
+			Vector2 targetPosition = target.transform.position;
+
+			float distance = Vector2.Distance(currentPosition, targetPosition);
+			return distance;
+		}
+	}
+
 	public bool IsDead
 	{
 		get
@@ -46,6 +68,8 @@ public class BaseCharacter : MonoBehaviour
 	[SerializeField] private Animator animator;
 	[SerializeField] private SpriteRenderer spriteRenderer;
 
+	public List<BaseSkill> skilList = new List<BaseSkill>();
+
 	private CharacterData characterData;
 
 	private CharacterStat characterStat;
@@ -55,6 +79,8 @@ public class BaseCharacter : MonoBehaviour
 	private float attackTimer = 0f;
 
 	private bool isJoyStickMove;
+
+	private bool isAttack;
 
 	public Action UiUpdateAction
 	{
@@ -99,12 +125,14 @@ public class BaseCharacter : MonoBehaviour
 			return;
 		}
 		Move();
+		CheckUseSkill();
 	}
 
 	public void ResetStat()
 	{
 		characterStat = CharacterStat.CharacterDataToChStat(characterData);
 		characterStat.Hp = characterStat.MaxHp;
+		SetSkill();
 		spriteRenderer.color = Color.white;
 		gameObject.SetActive(true);
 		UiUpdateAction?.Invoke();
@@ -127,7 +155,7 @@ public class BaseCharacter : MonoBehaviour
 		Vector2 targetPosition = target.transform.position;
 
 		float distance = Vector2.Distance(currentPosition, targetPosition);
-		bool isAttack = distance <= characterStat.AtkRange;
+		isAttack = distance <= characterStat.AtkRange;
 		if (isAttack)
 		{
 			Debug.Log("공격");
@@ -168,15 +196,21 @@ public class BaseCharacter : MonoBehaviour
 		{
 			attackTimer = 1f;
 			animator.SetTrigger("isAttack");
-			bool Cri = UnityEngine.Random.Range(0, 100) < characterStat.Luk;
-			if(Cri)
-			{
-				target.Hit(characterStat.Atk * characterStat.Cri);
-			}
-			else
-			{
-				target.Hit(characterStat.Atk);
-			}
+
+			target.Hit(CalcDamage());
+		}
+	}
+
+	public float CalcDamage()
+	{
+		bool Cri = UnityEngine.Random.Range(0, 100) < characterStat.Luk;
+		if (Cri)
+		{
+			return characterStat.Atk * characterStat.Cri;
+		}
+		else
+		{
+			return characterStat.Atk;
 		}
 	}
 
@@ -198,6 +232,16 @@ public class BaseCharacter : MonoBehaviour
 				CharacterManager.Instance.CheckStageFailed();
 			}
 		}
+		HitEffect.SetHitEffect(transform.position);
+	}
+
+	public void Hilling(int hp)
+	{
+		characterStat.Hp += hp;
+		if(characterStat.Hp < characterStat.MaxHp)
+		{
+			characterStat.Hp = characterStat.MaxHp;
+		}
 	}
 
 	public void ReTarget()
@@ -212,7 +256,7 @@ public class BaseCharacter : MonoBehaviour
 		}
 	}
 
-	private BaseCharacter FindClosest(List<BaseCharacter> list)
+	public BaseCharacter FindClosest(List<BaseCharacter> list)
 	{
 		float closestDistance = Mathf.Infinity;
 		Vector2 currentPosition = transform.position;
@@ -232,9 +276,25 @@ public class BaseCharacter : MonoBehaviour
 			}
 		}
 
-		if (closestEnemy != null)
+		return closestEnemy;
+	}
+
+	public List<BaseCharacter> FindClosestInRange(List<BaseCharacter> list)
+	{
+		Vector2 currentPosition = transform.position;
+		List<BaseCharacter> closestEnemy = new List<BaseCharacter>();
+
+		foreach (BaseCharacter enemy in list)
 		{
-			Debug.Log("가장 가까운 적: " + closestEnemy.name);
+			if (enemy.IsDead)
+			{
+				continue;
+			}
+			float distance = Vector2.Distance(currentPosition, enemy.transform.position);
+			if (distance < characterStat.AtkRange)
+			{
+				closestEnemy.Add(enemy);
+			}
 		}
 		return closestEnemy;
 	}
@@ -248,5 +308,36 @@ public class BaseCharacter : MonoBehaviour
 	public void JoyStickMoveEnd()
 	{
 		isJoyStickMove = false;
+	}
+
+	public void CheckUseSkill()
+	{
+		for(int i = 0; i < skilList.Count; ++i)
+		{
+			UseSkill(i);
+		}
+	}
+
+	public void UseSkill(int index)
+	{
+		if(skilList[index].IsUseSkill)
+		{
+			skilList[index].UseSkill(this);
+		}
+	}
+
+	public void SetSkill()
+	{
+		skilList.Clear();
+		for (int i = 0; i < characterData.skillDataList.Count; ++i)
+		{
+			int index = i;
+			skilList.Add(BaseSkill.ReturnSkill(characterData.skillDataList[index]));
+		}
+	}
+
+	public void InvokeAnim(string anim)
+	{
+		animator.Play(anim);
 	}
 }

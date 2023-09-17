@@ -83,6 +83,36 @@ public class SkillItem : MonoBehaviour
 
 	private string ReturnSkillStat()
 	{
-		return "스킬 설명";
+		string str = null;
+		switch (skillData.enum_Skill)
+		{
+			case Enum_Skill.None:
+				break;
+			case Enum_Skill.Onigiri:
+				break;
+			case Enum_Skill.CaS_1:
+				str = "범위 내 적을 모두 공격합니다.";
+				break;
+			case Enum_Skill.CaS_2:
+				break;
+			case Enum_Skill.SwS_1:
+				str = "적을 두번 치명타 공격합니다.";
+				break;
+			case Enum_Skill.SwS_2:
+				break;
+			case Enum_Skill.ChS_1:
+				str = "아군의 체력을 스킬 레벨에 비례해 회복합니다.";
+				break;
+			case Enum_Skill.ChS_2:
+				break;
+			case Enum_Skill.SnS_1:
+				str = "먼 거리의 적도 공격합니다.";
+				break;
+			case Enum_Skill.SnS_2:
+				break;
+			default:
+				break;
+		}
+		return str;
 	}
 }

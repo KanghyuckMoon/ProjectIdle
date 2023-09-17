@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71cf87f637d3884e8fd21c3f1503266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterPanel: {fileID: 0}
   characterButtonPrefab: {fileID: 2731952060592422622, guid: 8fee2b7cf31e41c4c93829b150940a53, type: 3}
   parent: {fileID: 7013401972546187826}
 --- !u!1001 &7193727942591316286
