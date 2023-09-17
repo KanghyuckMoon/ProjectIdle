@@ -13,15 +13,175 @@ MonoBehaviour:
   m_Name: AllStageDataSO
   m_EditorClassIdentifier: 
   stageDataList:
-  - stageName: Stage 1-1
+  - stageName: "\uB3D9\uD130\uC624\uB294 \uBAA8\uD5D8\uC2DC\uB300"
     enemyDataList:
     - enemyAddress: Enemy1
       count: 1
-    - enemyAddress: Enemy1
-      count: 1
-  - stageName: Stage 1-2
+  - stageName: "\uBAA8\uD5D8\uC758 \uC2DC\uC791"
     enemyDataList:
     - enemyAddress: Enemy1
+      count: 3
+  - stageName: "\uAC80\uAC1D\uB4E4\uC758 \uB4F1\uC7A5"
+    enemyDataList:
+    - enemyAddress: SwordMan
       count: 1
+  - stageName: "\uD131\uC744 \uB118\uC5B4\uB77C"
+    enemyDataList:
     - enemyAddress: Enemy2
       count: 3
+  - stageName: "\uCCAB\uBC88\uC9F8 \uB3D9\uC9C0"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 2
+    - enemyAddress: Enemy2
+      count: 2
+  - stageName: "\uCE5C\uAD6C"
+    enemyDataList:
+    - enemyAddress: SwordMan
+      count: 2
+  - stageName: "\uC694\uB9AC\uC0AC \uB4F1\uC7A5"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 2
+    - enemyAddress: SwordMan
+      count: 2
+  - stageName: "\uB9C8\uB140"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 3
+    - enemyAddress: Enemy2
+      count: 2
+    - enemyAddress: SwordMan
+      count: 1
+  - stageName: "\uC220\uC9D1\uC5D0\uC11C \uC0DD\uAE34\uC77C"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 3
+    - enemyAddress: Enemy2
+      count: 2
+    - enemyAddress: SwordMan
+      count: 2
+  - stageName: "\uD328\uC8FC"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 3
+    - enemyAddress: Enemy2
+      count: 2
+    - enemyAddress: SwordMan
+      count: 3
+  - stageName: "\uAC1C"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 3
+    - enemyAddress: Enemy2
+      count: 4
+    - enemyAddress: SwordMan
+      count: 3
+  - stageName: "\uBCF4\uBB3C"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 4
+    - enemyAddress: Enemy2
+      count: 4
+    - enemyAddress: SwordMan
+      count: 3
+  - stageName: "\uBB34\uBAA8\uD574!"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 5
+    - enemyAddress: Enemy2
+      count: 4
+    - enemyAddress: SwordMan
+      count: 3
+  - stageName: "\uC11C\uB9C9"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 5
+    - enemyAddress: Enemy2
+      count: 5
+    - enemyAddress: SwordMan
+      count: 3
+  - stageName: "\uB300\uACB0!"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 6
+    - enemyAddress: Enemy2
+      count: 5
+    - enemyAddress: SwordMan
+      count: 3
+  - stageName: "\uB450\uBC88\uC9F8 \uB3D9\uC9C0"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 7
+    - enemyAddress: Enemy2
+      count: 5
+    - enemyAddress: SwordMan
+      count: 3
+  - stageName: "\uD574\uC801"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 6
+    - enemyAddress: Enemy2
+      count: 5
+    - enemyAddress: SwordMan
+      count: 4
+  - stageName: "\uC545\uB9C8\uC758 \uC5F4\uB9E4"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 4
+    - enemyAddress: Enemy2
+      count: 3
+    - enemyAddress: SwordMan
+      count: 5
+  - stageName: "\uB3C4\uB451"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 5
+    - enemyAddress: Enemy2
+      count: 5
+    - enemyAddress: SwordMan
+      count: 5
+  - stageName: "\uB9C8\uC744"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 7
+    - enemyAddress: Enemy2
+      count: 5
+    - enemyAddress: SwordMan
+      count: 5
+  - stageName: "\uC81C\uC77C \uD76C\uD55C\uD574"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 7
+    - enemyAddress: Enemy2
+      count: 6
+    - enemyAddress: SwordMan
+      count: 5
+  - stageName: "\uC138\uBC88\uC9F8 \uB3D9\uC9C0"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 7
+    - enemyAddress: Enemy2
+      count: 7
+    - enemyAddress: SwordMan
+      count: 5
+  - stageName: "\uD5C8\uD48D\uACFC \uAE0D\uC9C0"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 5
+    - enemyAddress: Enemy2
+      count: 5
+    - enemyAddress: SwordMan
+      count: 7
+  - stageName: "\uACC4\uB7B5"
+    enemyDataList:
+    - enemyAddress: Enemy1
+      count: 7
+    - enemyAddress: Enemy2
+      count: 7
+    - enemyAddress: SwordMan
+      count: 7
+  - stageName: "\uCD08\uC2B9\uB2EC"
+    enemyDataList:
+    - enemyAddress: SwordMan
+      count: 10

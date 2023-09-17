@@ -908,6 +908,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5054501830737704935, guid: ec22482f68122ca4c954a49072d9e654, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054501830737704935, guid: ec22482f68122ca4c954a49072d9e654, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.00037740593
       objectReference: {fileID: 0}
@@ -1019,6 +1023,10 @@ PrefabInstance:
       propertyPath: stageSelectPanel
       value: 
       objectReference: {fileID: 467745376681271099}
+    - target: {fileID: 7475056324321720277, guid: ec22482f68122ca4c954a49072d9e654, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 575f69c7093eaf94abe557c10826e6ba, type: 3}
     - target: {fileID: 7620393416583133075, guid: ec22482f68122ca4c954a49072d9e654, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -1030,6 +1038,14 @@ PrefabInstance:
     - target: {fileID: 7620393416583133075, guid: ec22482f68122ca4c954a49072d9e654, type: 3}
       propertyPath: m_SizeDelta.x
       value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648665505254070413, guid: ec22482f68122ca4c954a49072d9e654, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 923
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648665505254070413, guid: ec22482f68122ca4c954a49072d9e654, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 520
       objectReference: {fileID: 0}
     - target: {fileID: 7817573016017134581, guid: ec22482f68122ca4c954a49072d9e654, type: 3}
       propertyPath: m_Name
@@ -1068,9 +1084,13 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4488166159906222437, guid: ec22482f68122ca4c954a49072d9e654, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 152244962889619382, guid: ec22482f68122ca4c954a49072d9e654, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5173606102667585106}
   m_SourcePrefab: {fileID: 100100000, guid: ec22482f68122ca4c954a49072d9e654, type: 3}
 --- !u!114 &467745376681271099 stripped
 MonoBehaviour:
@@ -1083,6 +1103,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7253fa1d0a2c614ca6a4238a6ae2f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3435576435046615612 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 152244962889619382, guid: ec22482f68122ca4c954a49072d9e654, type: 3}
+  m_PrefabInstance: {fileID: 3292552904456068490}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5173606102667585106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435576435046615612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!1 &4741417743870967423 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7817573016017134581, guid: ec22482f68122ca4c954a49072d9e654, type: 3}
